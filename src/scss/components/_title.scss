@@ -1,0 +1,35 @@
+.title {
+	color: var(--main-color);
+	font-size: 4vw;
+	margin: 2rem 0;
+
+	@include mq(m) {
+		align-self: center;
+		font-size: 1.5vw;
+		grid-area: title;
+		margin: 0;
+		text-align: center;
+	}
+
+	@include mq(l) {
+		flex-grow: 1;
+		margin: 2rem 0;
+		text-align: initial;
+	}
+
+	* {
+		margin-bottom: 0.5rem;
+		
+		@include mq(m) {
+			margin-bottom: 0;
+		}
+
+		@include mq(l) {
+			margin-bottom: 0.5rem;
+		}
+	}
+
+	small {
+		text-transform: uppercase;
+	}
+}

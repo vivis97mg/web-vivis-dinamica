@@ -1,0 +1,31 @@
+.photos {
+	@extend .u-responsive-flexbox;
+	
+	figure {
+		display: flex;
+		flex-direction: column;
+		padding: 1rem;
+	}
+
+	img {
+		background-color: var(--border-color);
+	}
+
+	figcaption {
+		align-items: center;
+		background-color: var(--second-color);
+		color: var(--alternate-color);
+		display: flex;
+		font-size: 4vw;
+		justify-content: space-between;
+		padding: 0.5rem;
+
+		@include mq(m) {
+			font-size: 1.5rem;
+		}
+	}
+
+	.fa-trash {
+		cursor: pointer;
+	}
+}

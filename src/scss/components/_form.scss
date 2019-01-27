@@ -1,0 +1,74 @@
+.form {
+	* {
+		margin-bottom: 0.5rem;
+	}
+
+	button[type="button"],
+	input[type="text"],
+	input[type="email"],
+	textarea {
+		border: thin solid var(--alternate-color);
+		border-radius: 0.25rem;
+		display: block;
+		font: normal 1rem var(--main-font);
+		padding: 0.5rem;
+		transition: all 0.3 ease-out;
+		width: 100%;
+	}
+
+	input[type="submit"] {
+		@extend .u-message;
+		@extend .u-btn;
+	}
+
+	progress {
+		-webkit-appearance: none;
+		appearance: none;
+		border-style: none;
+		height: 2rem;
+		margin-bottom: 1rem;
+		width: 100%;
+
+		&[value],
+		&::-webkit-progress-bar {
+			background-color: var(--alternate-color);
+		}
+
+		&::-moz-progress-bar,
+		&::-webkit-progress-value {
+			background-color: var(--second-color);
+		}
+
+		+ span {
+			@extend .u-message;
+			display: block;
+		}
+	}
+
+	&-uploader {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+
+		span {
+			display: block;
+			padding-left: 0.5rem;
+			text-align: center;
+			width: 15%;
+		}
+
+		input[type="file"] {
+			cursor: pointer;
+			bottom: 0;
+			left: 0;
+			opacity: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 100%;
+		}
+	}
+}

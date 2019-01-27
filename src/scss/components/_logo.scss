@@ -1,0 +1,18 @@
+.logo {
+	background-color: var(--alternate-color);
+	border-radius: 50%;
+	height: var(--logo-height);
+	left: var(--logo-spacing);
+	padding: var(--logo-spacing);
+	position: fixed;
+	top: var(--logo-spacing);
+	width: var(--logo-width);
+	z-index: 2;
+
+	@include mq(m) {
+		height: var(--header-height);
+		grid-area: logo;
+		position: static;
+		width: var(--header-height);
+	}
+}

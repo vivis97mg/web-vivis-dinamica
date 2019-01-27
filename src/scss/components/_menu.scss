@@ -1,0 +1,42 @@
+.menu {
+	font-size: 5vw;
+	margin-bottom: 2rem;
+	text-align: right;
+
+	@include mq(m) {
+		font-size: 1.5rem;
+		grid-area: menu;
+	}
+}
+
+ul {
+	@include mq(m) {
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	@include mq(l) {
+		display: initial;
+	}
+}
+
+a {
+	display: block;
+	padding-right: 0.5rem;
+	transition: background-color 0.3s ease-out,
+							color 0.3s ease-out;
+
+	&:hover {
+		background-color: var(--alternate-color);
+		color: var(--main-color);
+		
+		@include mq(m) {
+			background-color: rgba(0, 0, 0, 0);
+		}
+
+		@include mq(l) {
+			background-color: var(--alternate-color);
+		}
+	}
+	
+}

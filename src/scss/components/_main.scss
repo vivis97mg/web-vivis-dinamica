@@ -1,0 +1,22 @@
+.main {
+	min-height: 100vh;
+	padding: var(--header-height) 0.5rem 0 0.5rem;
+	transition: transform 0.3s ease-out,
+							width 0.3s ease-out;
+	width: 100%;
+
+	&.is-active {
+		transform: translateX(100%);
+		width: 50%;
+	}
+
+	@include mq(m) {
+		padding-top: calc( var(--header-height) + 2rem );
+	}
+
+	@include mq(l) {
+		padding: 1rem;
+		transform: translateX(calc(50% - 4rem));
+		width: 70%;
+	}
+}

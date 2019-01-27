@@ -1,0 +1,53 @@
+/* Reset */
+html {
+  background-color: var(--bg-modal-color);
+  box-sizing: border-box;
+  color: var(--text-color);
+  font-family: var(--main-font), var(--alternate-font);
+  font-size: var(--font-size);
+  line-height:  var(--line-height);
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+*:focus {
+  outline: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+  color: var(--link-color);
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease-out;
+
+  &:hover,
+  &:focus,
+  &:active {
+		color: var(--link-hover-color);
+	}
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+::selection {
+  background-color: var(--main-color);
+  color: var(--second-color);
+}

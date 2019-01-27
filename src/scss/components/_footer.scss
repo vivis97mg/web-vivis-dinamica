@@ -1,0 +1,13 @@
+.footer {
+	background-color: var(--second-modal-color);
+	color: var(--alternate-color);
+	text-align: center;
+
+	@include mq(m) {
+		display: none;
+	}
+
+	@include mq(l) {
+		display: initial;
+	}
+}

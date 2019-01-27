@@ -1,0 +1,73 @@
+.header {
+	background-color: var(--second-color);
+	height: 100vh;
+	left: 0;
+	overflow-y: auto;
+	padding: var(--header-height) 0.5rem 0.5rem 0.5rem;
+	position: fixed;
+	top: 0;
+	left: -100%;
+	transition: left 0.5s ease-in-out;
+	width: 50%;
+	z-index: 1;
+
+	&.is-active {
+		left: 0;
+	}
+
+	@include mq(m) {
+		display: grid;
+		grid-gap: 1vw;
+		grid-template-areas:
+			'logo title menu'
+			'logo title social';
+		grid-template-columns: var(--header-height) 1fr 2fr;
+		grid-template-rows: repeat(2, calc( var(--header-height) / 2 ));
+		height: auto;
+		left: 0;
+		padding: 0.5rem;
+		width: 100%;
+	}
+
+	@include mq(l) {
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+		padding: 1rem;
+		position: fixed;
+		width: 30%;
+	}
+
+	&-btn {
+		background-color: var(--second-color);
+		display: flex;
+		height: var(--logo-height);
+		position: fixed;
+		right: var(--logo-spacing);
+		top: var(--logo-spacing);
+		width: var(--logo-width);
+		z-index: 2;
+
+		@include mq(m) {
+			display: none;
+		}
+
+		& {
+
+			&.hamburger:focus {
+				border-width: 0;
+			}
+
+			.hamburger {
+				&-inner:before,
+				&-inner,
+				&-inner:after {
+					background-color: var(--link-color);
+					width: 100%;
+				}
+			}
+		}
+
+	}
+
+}
