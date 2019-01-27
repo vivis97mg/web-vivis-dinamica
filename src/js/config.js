@@ -7,7 +7,7 @@ const config = {
 	projectId: "web-vivis-dinamica",
 	storageBucket: "web-vivis-dinamica.appspot.com",
 	messagingSenderId: "1034417881051"
-}
+};
 
 const init = () => firebase.initializeApp(config);
 
