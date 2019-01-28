@@ -70,16 +70,11 @@ const routes = () => {
 			
 		}
 
-		else if ( e.target.matches('#login-github') ) {
-			signInGitHub();
-		}
-
 		else if ( e.target.matches('#login-google') ) {
 			signInGoogle();
 		}
 		
 		else if ( e.target.matches('#logout') ) {
-			signOutGitHub();
 			signOutGoogle();
 		}
 
